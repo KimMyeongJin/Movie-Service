@@ -6,8 +6,8 @@ class Movie extends Component{
     render(){
         return(
             <div>
-                <h1>Hello this is a Movie.</h1>
-                <MoviePoster />
+                <h1>{this.props.title}</h1>
+                <MoviePoster poster={this.props.poster} />
             </div>
         )
     }
@@ -16,7 +16,7 @@ class Movie extends Component{
 class MoviePoster extends Component{
     render(){
         return(
-            <img src="https://cdn1.thr.com/sites/default/files/2015/12/splashd-bigshort_0.jpg"/>
+            <img src={this.props.poster}/>
         )
     }
 }
