@@ -2,21 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import Movie from './Movie';
 
-const movieTitles = [
-  
-  
-  
-]
 
-const movieImages = [
-  
-  
-  
-  
-]
 
 const movies = [
-  {
+  { 
     title: "Matrix",
     poster: "https://i.pinimg.com/564x/ed/47/96/ed4796ac6feff9d2a6115406f964c928.jpg"
   },
@@ -38,8 +27,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {movies.map(movie => {
-         return <Movie title={movie.title} poster={movie.poster} />
+        {movies.map((movie, index) => {
+         return <Movie title={movie.title} poster={movie.poster} key={index}/>
         })}
       </div>
     );
