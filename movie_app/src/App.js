@@ -2,10 +2,21 @@ import React, { Component } from 'react';
 import './App.css';
 import Movie from './Movie';
 
+const movieTitles = [
+  
+  
+  
+]
 
+const movieImages = [
+  
+  
+  
+  
+]
 
 const movies = [
-  { 
+  {
     title: "Matrix",
     poster: "https://i.pinimg.com/564x/ed/47/96/ed4796ac6feff9d2a6115406f964c928.jpg"
   },
@@ -24,11 +35,30 @@ const movies = [
 ]
 
 class App extends Component {
+
+  state = {
+    greeting: 'Hello!'
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        greeting:'Hello again!'
+      })
+    }, 5000) 
+  }
+
   render() {
     return (
       <div className="App">
+<<<<<<< HEAD
+        {this.state.greeting}
         {movies.map((movie, index) => {
          return <Movie title={movie.title} poster={movie.poster} key={index}/>
+=======
+        {movies.map(movie => {
+         return <Movie title={movie.title} poster={movie.poster} />
+>>>>>>> parent of c15dc88... Validating Props with PropTypes
         })}
       </div>
     );
