@@ -1,3 +1,3 @@
 # Movie-Service
 
-My React Project
+My React movie Project
